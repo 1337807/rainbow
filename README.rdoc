@@ -10,3 +10,6 @@
 
 == To setup Rainbow run this:
   \curl -L https://raw.github.com/1337807/rainbow/master/script/bootstrap.sh | bash
+
+== To setup server monitoring run this:
+  /home/rails/script/server_monitoring.sh

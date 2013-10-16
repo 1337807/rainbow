@@ -1,8 +1,9 @@
 : ${APP_NAME:?"You need to set the APP_NAME environment variable."}
 cd /home
 rm -rf rails
-apt-get update && apt-get install git siege
-git clone git@github.com:1337807/rainbow.git rails
+apt-get -y update && apt-get -y install git siege
+echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+git clone -y git@github.com:1337807/rainbow.git rails
 chown rails:rails rails
 chown -R rails:www-data rails/*
 cd rails/

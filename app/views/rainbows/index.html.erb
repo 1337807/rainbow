@@ -1,0 +1,27 @@
+<h1>Listing rainbows</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Pretty</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rainbows.each do |rainbow| %>
+  <tr>
+    <td><%= rainbow.name %></td>
+    <td><%= rainbow.description %></td>
+    <td><%= rainbow.pretty %></td>
+    <td><%= link_to 'Show', rainbow %></td>
+    <td><%= link_to 'Edit', edit_rainbow_path(rainbow) %></td>
+    <td><%= link_to 'Destroy', rainbow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rainbow', new_rainbow_path %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @rainbow.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @rainbow.description %>
+</p>
+
+<p>
+  <b>Pretty:</b>
+  <%= @rainbow.pretty %>
+</p>
+
+
+<%= link_to 'Edit', edit_rainbow_path(@rainbow) %> |
+<%= link_to 'Back', rainbows_path %>

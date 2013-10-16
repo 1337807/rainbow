@@ -9,4 +9,4 @@
   ''-'   `'-'   '.(_,_).'  '---' '--'    '--'/_______.'     '-----'    `---'    `---` 
 
 == To setup Rainbow run this:
-  \curl -L https://gist.github.com/1337807/32e2cf6c59b2d92000b3 | bash
+  \curl -L https://raw.github.com/1337807/rainbow/master/script/bootstrap.sh | bash

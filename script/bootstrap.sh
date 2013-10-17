@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-: ${APP_NAME:?"You need to set the APP_NAME environment variable."}
+APP_NAME=`hostname`
 cd /home
 rm -rf rails
 apt-get -y update && apt-get -y install git siege

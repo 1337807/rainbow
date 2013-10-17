@@ -12,5 +12,5 @@ bundle install
 RAILS_ENV=production rake db:setup
 perl -pi -e "s/Ichi/$APP_NAME/g" config/newrelic.yml
 pkill -f unicorn
-bundle exec unicorn_rails -D -E production -c /home/rails/config/unicorn.rb
-siege localhost &
+gem install god
+god -c /home/rails/config/rainbow.god

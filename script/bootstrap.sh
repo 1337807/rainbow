@@ -13,5 +13,5 @@ cd /home/rails
 bundle install
 RAILS_ENV=production rake db:setup
 perl -pi -e "s/Ichi/$APP_NAME/g" config/newrelic.yml
-gem install god
+gem install god --no-rdoc --no-ri
 god -c /home/rails/config/rainbow.god

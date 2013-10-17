@@ -6,6 +6,7 @@ rm -rf rails
 apt-get -y update && apt-get -y install git siege
 echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 git clone git@github.com:1337807/rainbow.git rails
+mkdir /home/rails/tmp/pids
 chown rails:rails rails
 chown -R rails:www-data rails/*
 cd /home/rails

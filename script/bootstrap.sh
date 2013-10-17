@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 APP_NAME=`hostname`
 cd /home
+pkill -f unicorn
 rm -rf rails
 apt-get -y update && apt-get -y install git siege
 echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
@@ -11,6 +12,5 @@ cd /home/rails
 bundle install
 RAILS_ENV=production rake db:setup
 perl -pi -e "s/Ichi/$APP_NAME/g" config/newrelic.yml
-pkill -f unicorn
 gem install god
 god -c /home/rails/config/rainbow.god
